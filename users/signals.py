@@ -28,7 +28,8 @@ def save_profile(sender, instance, **kwargs):
 def register_login(sender, user, request, **kwargs):
     UserActivity.objects.create(
         user=user,
-        session_key=request.session.session_key
+        session_key=request.session.session_key,
+        login=Now()
     )
 
 @receiver(user_logged_out)
