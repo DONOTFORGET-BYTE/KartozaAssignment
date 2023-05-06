@@ -82,10 +82,10 @@ class UpdateUserForm(forms.ModelForm):
 
 class UpdateProfileForm(forms.ModelForm):
     home_address = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 5}))
-    # phone_number = forms.NumberInput(widget=forms.NumberInput(attrs={'class': 'form-control', 'rows': 6}))
-    # longitude = forms.NumberInput(widget=forms.NumberInput(attrs={'class': 'form-control', 'rows': 6}))
-    # latitude = forms.NumberInput(widget=forms.NumberInput(attrs={'class': 'form-control', 'rows': 7}))
+    phone_number = forms.NumberInput(attrs={'minlength': 12, 'maxlength': 15, 'required': True, 'type': 'number','class': 'form-control' })
+    longitude = forms.NumberInput(attrs={'minlength': 1, 'maxlength': 20, 'required': False, 'type': 'number','class': 'form-control' })
+    latitude = forms.NumberInput(attrs={'minlength': 1, 'maxlength': 20, 'required': False, 'type': 'number','class': 'form-control' })
 
     class Meta:
         model = Profile
-        fields = ['home_address']
+        fields = ['home_address','phone_number','longitude','latitude']
