@@ -5,28 +5,26 @@ This web app has been developed using the popular Django framework and Bootstrap
     
 * Register – Users can register and create a new profile
 * Login - Registered users can login using username and password
-* Social Apps Login – Users can login using their GitHub or Google account
-* User Profile - Once logged in, users can create and update additional information such as avatar and bio in the profile page
-* Update Profile – Users can update their information such as username, email, password, avatar and bio
+* User Profile - Once logged in, users can create and update additional information such as home address, phone number and location in the profile page
 * Remember me – Cookie Option, users don’t have to provide credentials every time they hit the site
 * Forgot Password – Users can easily retrieve their password if they forget it 
-* Admin Panel – admin can CRUD users
+* Admin Panel – admin can review users and perform CRUD operations on them ,as well review user logging activities
 
-![ScreenShot](https://user-images.githubusercontent.com/66206865/131695930-648342b0-010b-44b2-a419-15ad54d47869.png)
 
-## Tutorial
-[Here](https://dev.to/earthcomfy/series/14274) is a tutorial on how to build this project.
-
-### Quick Start
+### To run project
 To get this project up and running locally on your computer follow the following steps.
 1. Set up a python virtual environment
 2. Run the following commands
 ```
-$ pip install -r requirements.txt
-$ python manage.py migrate
-$ python manage.py createsuperuser
+$ pip install -r requirements.txt (this contains the project dependencies)
+$ python manage.py migrate (to run migrations)
+$ python manage.py createsuperuser (to login to admin panel)
 $ python manage.py runserver
 ```
-   
-3. Open a browser and go to http://localhost:8000/
+  
+  ### URL's 
+3. Open a browser and go to http://localhost:8000/ (main page)
+http://localhost:8000/admin (admin panel)
+
+
 
