@@ -24,7 +24,7 @@ class UserActivity(models.Model):
         on_delete=models.CASCADE
     )
     session_key = models.CharField(max_length=40, db_index=True)
-    login = models.DateTimeField(auto_now_add=True)
+    login = models.DateTimeField(null=True, default=None)
     logout = models.DateTimeField(null=True, default=None)
 
     def __str__(self):
