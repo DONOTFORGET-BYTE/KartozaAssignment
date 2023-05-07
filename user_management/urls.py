@@ -10,12 +10,12 @@ from users.views import CustomLoginView, ResetPasswordView, ChangePasswordView
 
 from users.forms import LoginForm
 
-# TODO remove unneccessary urls and replace with one for maps
-
 urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('', include('users.urls')),
+
+    path('',include('google.urls')),
 
     path('login/', CustomLoginView.as_view(redirect_authenticated_user=True, template_name='users/login.html',
                                            authentication_form=LoginForm), name='login'),
@@ -32,8 +32,6 @@ urlpatterns = [
          auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),
          name='password_reset_complete'),
 
-    path('password-change/', ChangePasswordView.as_view(), name='password_change'),
+    path('password-change/', ChangePasswordView.as_view(), name='password_change')
 
-    re_path(r'^oauth/', include('social_django.urls', namespace='social')),
-
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]

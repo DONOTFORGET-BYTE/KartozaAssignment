@@ -4,8 +4,6 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 from .models import Profile
 
-# TODO change registration form and update user
-
 class RegisterForm(UserCreationForm):
     # fields we want to include and customize in our form
     first_name = forms.CharField(max_length=100,
@@ -72,7 +70,7 @@ class UpdateUserForm(forms.ModelForm):
     username = forms.CharField(max_length=100,
                                required=True,
                                widget=forms.TextInput(attrs={'class': 'form-control'}))
-    email = forms.EmailField(required=True,
+    email = forms.EmailField(required=False,
                              widget=forms.TextInput(attrs={'class': 'form-control'}))
 
     class Meta:
@@ -81,8 +79,8 @@ class UpdateUserForm(forms.ModelForm):
 
 
 class UpdateProfileForm(forms.ModelForm):
-    home_address = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control', 'rows': 5}))
-    phone_number = forms.NumberInput(attrs={'minlength': 12, 'maxlength': 15, 'required': True, 'type': 'number','class': 'form-control' })
+    home_address = forms.CharField(widget=forms.Textarea(attrs={'class': 'form-control','required': False, 'rows': 4}))
+    phone_number = forms.NumberInput(attrs={'minlength': 10, 'maxlength': 20, 'required': False, 'type': 'number','class': 'form-control' })
     longitude = forms.NumberInput(attrs={'minlength': 1, 'maxlength': 20, 'required': False, 'type': 'number','class': 'form-control' })
     latitude = forms.NumberInput(attrs={'minlength': 1, 'maxlength': 20, 'required': False, 'type': 'number','class': 'form-control' })
 

@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UserConfig',
+    'google.apps.GoogleConfig',
+    'bootstrap_modal_forms',
 ]
 
 MIDDLEWARE = [
@@ -123,14 +125,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+# using google maps api
+GOOGLE_API_KEY = 'AIzaSyDiWD9g8fYLf1NUuXsmEadKxAKA3bTS3mY'
+
+BASE_COUNTRY = 'SA'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
 
 
 LOGIN_REDIRECT_URL = '/'
