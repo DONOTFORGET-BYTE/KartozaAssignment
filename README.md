@@ -14,7 +14,7 @@ This web app has been developed using Django version 4.0
 
 
 ### To run project
-Make sure python version 3.* is installed on machine
+Make sure python version 3.* is installed on machine.
 To get this project up and running locally on your computer follow the following steps.
 1. download project to local machine
 2. open project directory with cmd (command prompt)
