@@ -20,7 +20,7 @@ def map(request):
     context = {
         'key':key,
     }
-    return render(request, 'google/map.html',context)
+    return render(request, 'map.html',context)
 
 
 def user_locations(request):
