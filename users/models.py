@@ -9,8 +9,8 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     home_address = models.TextField(null=True,blank=True)
     phone_number = PhoneNumberField(null=True, unique=True)
-    longitude = models.DecimalField(max_digits=20, decimal_places=3,null=True,blank=True)
-    latitude = models.DecimalField(max_digits=20, decimal_places=3,null=True,blank=True)
+    longitude = models.FloatField(null=True,default=0)
+    latitude = models.FloatField(null=True,default=0)
 
     def __str__(self):
         return self.user.username
@@ -23,7 +23,7 @@ class UserActivity(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE
     )
-    session_key = models.CharField(max_length=40, db_index=True)
+    session_key = models.CharField(max_length=40, db_index=True,null=True)
     login = models.DateTimeField(null=True, default=None)
     logout = models.DateTimeField(null=True, default=None)
 
