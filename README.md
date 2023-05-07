@@ -6,7 +6,7 @@ This web app has been developed using Django version 4.0
 * Register – Users can register and create a new profile
 * Login - Registered users can login using username and password
 * User Profile - Once logged in, users can create and update additional information such as home address, phone number and location in the profile page
-* Main Page - On the navigation tab is a map option ,once clicked will navigate the user to the maps page ,where all the locations for the registered will be shown
+* Main Page - On the navigation tab is a map option ,once clicked will navigate the user to the maps page ,where all the locations for the registered users will be shown
 * Main Page - Once logged in, on the navigation tab a user icon will be available ,when clicked will show a pop up modal with user profile details
 * Remember me – Cookie Option, users don’t have to provide credentials every time they hit the site
 * Forgot Password – Users can easily retrieve their password if they forget it 
@@ -41,6 +41,7 @@ $ python manage.py migrate
   ### URL's 
 7. Open a browser and go to http://localhost:8000/ (main page)
 8. http://localhost:8000/admin (admin panel)
+9. http://localhost:8000/map (map page)
 
 
 
