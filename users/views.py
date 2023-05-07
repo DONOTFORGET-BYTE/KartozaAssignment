@@ -6,7 +6,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.views import View
 from django.contrib.auth.decorators import login_required
 
-from .forms import RegisterForm, LoginForm, UpdateUserForm, UpdateProfileForm
+from .forms import RegisterForm, LoginForm, UpdateUserForm, UpdateProfileForm, ProfileDetailsForm
 
 # TODO reset password needs to removed or replaceed with maps
 
@@ -96,3 +96,10 @@ def profile(request):
         profile_form = UpdateProfileForm(instance=request.user.profile)
 
     return render(request, 'users/profile.html', {'user_form': user_form, 'profile_form': profile_form})
+
+@login_required
+def evoke_modal(request):
+    form = ProfileDetailsForm()
+    return render(request, 'users/profile_form.html', {
+        'form': form,
+    })
