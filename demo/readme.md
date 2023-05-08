@@ -1,1 +1,1 @@
-this contains pictures of the web app
+this contains demostration pictures of the web app.
