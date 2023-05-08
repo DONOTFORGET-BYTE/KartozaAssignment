@@ -29,7 +29,7 @@ $ activate
 ```
 5. navigate back to the main directory and type the following:
 ```
-$ pip install -r requirements.txt (this contains the project dependencies)
+$ pip install -r requirements.txt (this will install the project dependencies)
 $ python manage.py createsuperuser (to login to admin panel)
 $ python manage.py runserver
 ```
@@ -38,11 +38,23 @@ $ python manage.py runserver
 $ python manage.py make migrations
 $ python manage.py migrate
 ```
+
+### RUNNING TESTS
+There are some test cases defined. These tests:
+* ensure all the urls are reachable
+* ensure when a user is created a profile is attached to them
+* ensure a user will be able to perform CRUD operations on their profile
+* ensure all critical apps are installed
+These tests can be found within the tests folder of each app.
+To run the tests, in cmd execute the following command:
+```
+$ python manage.py test
+```
   
-  ### URL's 
-7. Open a browser and go to http://localhost:8000/ (main page)
-8. http://localhost:8000/admin (admin panel)
-9. http://localhost:8000/map (map page)
+ ### URL's 
+* http://localhost:8000/ (main page)
+* http://localhost:8000/admin (admin panel)
+* http://localhost:8000/map (maps page)
 
 
 
