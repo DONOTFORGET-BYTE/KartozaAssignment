@@ -8,8 +8,6 @@ from django.contrib.auth.decorators import login_required
 
 from .forms import RegisterForm, LoginForm, UpdateUserForm, UpdateProfileForm, ProfileDetailsForm
 
-# TODO reset password needs to removed or replaceed with maps
-
 def home(request):
     return render(request, 'users/home.html')
 

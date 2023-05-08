@@ -4,6 +4,8 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 from .models import Profile
 
+"""This module defines the characteristics of the fields within the forms that are used on different pages"""
+
 class RegisterForm(UserCreationForm):
     # fields we want to include and customize in our form
     first_name = forms.CharField(max_length=100,
